@@ -1,4 +1,4 @@
-import Hello from './Hello'
+import Button from './Button'
 import './styles.scss'
 
-export default Hello
+export default Button

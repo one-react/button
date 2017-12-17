@@ -1,3 +1,64 @@
-body {
-  font-size: 20px;
+@import "~or-theme";
+
+.#{$prefix}-btn {
+  width: 120px;
+  padding: $btn-padding-y $btn-padding-x;
+  background-color: $white;
+  color: $gray8;
+  border-width: 1px;
+  border-color: $gray8;
+  border-style: solid;
+  font-size: 14px;
+  border-radius: 1px;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $gray8;
+    color: $white;
+  }
+
+  &.disabled {
+    background-color: $disabled-color;
+    border-color: $disabled-color;
+
+    &:hover {
+      cursor: not-allowed;
+      background-color: $disabled-color;
+      border-color: $disabled-color;
+    }
+  }
 }
+
+.#{$prefix}-btn-large {
+  width: 300px;
+}
+
+.#{$prefix}-btn-small {
+  width: 100px;
+  padding: $btn-padding-y-sm $btn-padding-x-sm;
+}
+
+.#{$prefix}-btn-primary {
+  background-color: $primary-color;
+  color: $white;
+  border-color: $primary-color;
+
+  &:hover {
+    background-color: $primary-color0;
+    border-color: $primary-color0;
+  }
+}
+
+.#{$prefix}-btn-warning {
+  background-color: $warning-color;
+  color: $white;
+  border-color: $warning-color;
+
+  &:hover {
+    background-color: $warning-color0;
+    border-color: $warning-color0;
+  }
+}
+
+// back to top button

@@ -1,5 +1,6 @@
 {
   "name": "or-button",
+  "version": "0.0.0-development",
   "description": "",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
@@ -28,6 +29,7 @@
     "@commitlint/cli": "^4.3.0",
     "@commitlint/config-angular": "^4.3.0",
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.3",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
@@ -53,7 +55,11 @@
     "react-test-renderer": "^16.1.1",
     "semantic-release": "^8.2.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "or-theme": "^1.1.1",
+    "prop-types": "^15.6.0"
+  },
   "peerDependencies": {
     "react": ">=15.5 <=16.x"
   },
