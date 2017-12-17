@@ -1,6 +1,5 @@
 {
   "name": "or-button",
-  "version": "0.0.0-development",
   "description": "",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
