@@ -12,6 +12,7 @@ class Button extends React.Component {
       'or-btn-small': small,
       disabled
     })
+
     return (
       <div className={btnClass} onClick={this.handleClick}>
         {children}
@@ -21,8 +22,9 @@ class Button extends React.Component {
 
   handleClick = e => {
     e.preventDefault()
-    if (!this.props.disabled) {
-      this.props.onClick()
+    const { disabled, onClick } = this.props
+    if (!disabled && onClick) {
+      onClick()
     }
   }
 }
