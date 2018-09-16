@@ -1,0 +1,42 @@
+.type {
+  display: flex;
+  align-items: baseline;
+
+  .or-btn + .or-btn {
+    margin-left: 20px;
+  }
+}
+
+.size {
+  h1 {
+    color: #555;
+  }
+  .small {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 30px;
+
+    .or-btn + .or-btn {
+      margin-left: 20px;
+    }
+  }
+
+  .normal {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 30px;
+
+    .or-btn + .or-btn {
+      margin-left: 20px;
+    }
+  }
+
+  .large {
+    display: flex;
+    align-items: baseline;
+
+    .or-btn + .or-btn {
+      margin-left: 20px;
+    }
+  }
+}

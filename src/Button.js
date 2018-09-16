@@ -7,7 +7,7 @@ class Button extends React.Component {
     const {type, small, large, children, disabled} = this.props
     const btnClass = classNames({
       'or-btn': true,
-      [`or-btn-${type}`]: true,
+      [`or-btn-${type === undefined ? 'default' : type}`]: true,
       'or-btn-large': large,
       'or-btn-small': small,
       disabled
@@ -35,7 +35,7 @@ Button.propTypes = {
   small: PropTypes.bool,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
-  children: PropTypes.children
+  children: PropTypes.node
 }
 
 export default Button
