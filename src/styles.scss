@@ -1,7 +1,8 @@
 @import "~or-theme";
 
 .#{$prefix}-btn {
-  width: 120px;
+  display: inline-block;
+  min-width: 120px;
   padding: $btn-padding-y $btn-padding-x;
   background-color: $white;
   color: $gray8;
@@ -11,6 +12,8 @@
   font-size: 14px;
   border-radius: 1px;
   text-align: center;
+  box-sizing: border-box;
+  font-family: $font-family;
   cursor: pointer;
 
   &:hover {
@@ -31,11 +34,12 @@
 }
 
 .#{$prefix}-btn-large {
-  width: 300px;
+  min-width: 300px;
+  font-size: 16px;
 }
 
 .#{$prefix}-btn-small {
-  width: 100px;
+  min-width: 100px;
   padding: $btn-padding-y-sm $btn-padding-x-sm;
 }
 
@@ -60,5 +64,3 @@
     border-color: $warning-color0;
   }
 }
-
-// back to top button

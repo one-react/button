@@ -8,26 +8,25 @@ import Button from '../../src'
 import './index.scss'
 
 const handleClick = action('button-click')
-storiesOf('OR-Button', module)
-  .add('button type', () => (
-    <div className="type">
-      <Button type="primary" onClick={handleClick}>
-        ADD TO CART
-      </Button>
-      <Button onClick={handleClick}>SIGN UP</Button>
-      <Button type="warning" onClick={handleClick}>
-        DELETE
-      </Button>
-      <Button type="primary" disabled onClick={handleClick}>
-        DISABLED
-      </Button>
-    </div>
-  ))
-  .add(
-    'button size',
-    withInfo({ inline: true })(() => (
+storiesOf('OR-Button', module).add(
+  'button',
+  withInfo({ inline: true })(() => (
+    <div>
+      <h1>button type:</h1>
+      <div className="type">
+        <Button type="primary" onClick={handleClick}>
+          ADD TO CART
+        </Button>
+        <Button onClick={handleClick}>SIGN UP</Button>
+        <Button type="warning" onClick={handleClick}>
+          DELETE
+        </Button>
+        <Button type="primary" disabled onClick={handleClick}>
+          DISABLED
+        </Button>
+      </div>
       <div className="size">
-        <h1>small:</h1>
+        <h1>small size:</h1>
         <div className="small">
           <Button type="primary" size="small" onClick={handleClick}>
             ADD TO CART
@@ -42,7 +41,7 @@ storiesOf('OR-Button', module)
             DISABLED
           </Button>
         </div>
-        <h1>normal:</h1>
+        <h1>normal size:</h1>
         <div className="normal">
           <Button type="primary" onClick={handleClick}>
             ADD TO CART
@@ -55,7 +54,7 @@ storiesOf('OR-Button', module)
             DISABLED
           </Button>
         </div>
-        <h1>large:</h1>
+        <h1>large size:</h1>
         <div className="large">
           <Button type="primary" size="large" onClick={handleClick}>
             ADD TO CART
@@ -70,6 +69,13 @@ storiesOf('OR-Button', module)
             DISABLED
           </Button>
         </div>
+        <h1>text is too long:</h1>
+        <div className="long">
+          <Button size="large" onClick={handleClick}>
+            TOO LOOOOOOOOOOOOOOOOOOG
+          </Button>
+        </div>
       </div>
-    ))
-  )
+    </div>
+  ))
+)

@@ -3,11 +3,11 @@ import React, { PureComponent } from 'react'
 
 interface Props {
   /**
-   * The type for button
+   * type for button
    **/
   type?: 'primary' | 'warning'
   /**
-   * The size for button
+   * size for button
    **/
   size?: 'large' | 'small'
   /**
@@ -15,14 +15,14 @@ interface Props {
    **/
   disabled?: boolean
   /**
-   * button click callback
+   * callback triggered button click
    **/
   onClick?: () => void
 }
 
 export class Button extends PureComponent<Props, {}> {
   public render() {
-    const { type = 'default', size, children, disabled } = this.props
+    const { type, size, children, disabled } = this.props
     const btnClass = clx({
       'or-btn': true,
       [`or-btn-${type}`]: type,
