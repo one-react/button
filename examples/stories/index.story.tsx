@@ -9,7 +9,7 @@ import './index.scss'
 
 const handleClick = action('button-click')
 storiesOf('or-button', module).add(
-  '',
+  'basic',
   withInfo({ inline: true })(() => (
     <div>
       <h1>button type:</h1>

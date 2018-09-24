@@ -1,7 +1,7 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { Button } from '../src/Button'
+import Button from '../src'
 
 describe('src/index', () => {
   it('should render properly: type#default', () => {
