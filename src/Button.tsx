@@ -1,19 +1,25 @@
 import clx from 'classnames'
-import React, { PureComponent } from 'react'
+import React, { MouseEvent, PureComponent } from 'react'
 
 interface Props {
   /**
    * type for button
+   * @default 'default'
    **/
   type?: 'primary' | 'warning'
   /**
    * size for button
+   * @default 'default'
    **/
   size?: 'large' | 'small'
   /**
    * whether the button can be clicked
    **/
   disabled?: boolean
+  /**
+   * custom classname
+   **/
+  classname?: string
   /**
    * callback triggered button click
    **/
@@ -22,13 +28,22 @@ interface Props {
 
 export class Button extends PureComponent<Props, {}> {
   public render() {
-    const { type, size, children, disabled } = this.props
-    const btnClass = clx({
-      'or-btn': true,
-      [`or-btn-${type}`]: type,
-      [`or-btn-${size}`]: size,
-      disabled
-    })
+    const {
+      type = 'default',
+      size = 'default',
+      children,
+      disabled,
+      classname
+    } = this.props
+    const btnClass = clx(
+      'or-btn',
+      {
+        [`or-btn-${type}`]: type,
+        [`or-btn-size-${size}`]: size,
+        [`or-btn-disabled`]: disabled
+      },
+      classname
+    )
 
     return (
       <div className={btnClass} onClick={this.handleClick}>
@@ -37,7 +52,7 @@ export class Button extends PureComponent<Props, {}> {
     )
   }
 
-  public handleClick = e => {
+  public handleClick = (e: MouseEvent<HTMLElement>) => {
     e.preventDefault()
     const { disabled, onClick } = this.props
     if (!disabled && onClick) {

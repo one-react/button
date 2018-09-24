@@ -8,13 +8,13 @@ import Button from '../../src'
 import './index.scss'
 
 const handleClick = action('button-click')
-storiesOf('OR-Button', module).add(
-  'button',
+storiesOf('or-button', module).add(
+  '',
   withInfo({ inline: true })(() => (
     <div>
       <h1>button type:</h1>
-      <div className="type">
-        <Button type="primary" onClick={handleClick}>
+      <div>
+        <Button classname="hello world" type="primary" onClick={handleClick}>
           ADD TO CART
         </Button>
         <Button onClick={handleClick}>SIGN UP</Button>
