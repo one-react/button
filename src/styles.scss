@@ -1,26 +1,19 @@
 @import "~or-theme";
 
-.#{$prefix}-btn {
-  width: 120px;
-  padding: $btn-padding-y $btn-padding-x;
-  background-color: $white;
-  color: $gray8;
+.or-btn {
+  display: inline-block;
   border-width: 1px;
-  border-color: $gray8;
   border-style: solid;
-  font-size: 14px;
   border-radius: 1px;
   text-align: center;
+  box-sizing: border-box;
+  font-family: $font-family;
   cursor: pointer;
 
-  &:hover {
-    background-color: $gray8;
-    color: $white;
-  }
-
-  &.disabled {
+  &.or-btn-disabled {
     background-color: $disabled-color;
     border-color: $disabled-color;
+    color: $white;
 
     &:hover {
       cursor: not-allowed;
@@ -30,16 +23,18 @@
   }
 }
 
-.#{$prefix}-btn-large {
-  width: 300px;
+.or-btn-default {
+  background-color: $white;
+  color: $gray8;
+  border-color: $gray8;
+
+  &:hover {
+    background-color: $gray8;
+    color: $white;
+  }
 }
 
-.#{$prefix}-btn-small {
-  width: 100px;
-  padding: $btn-padding-y-sm $btn-padding-x-sm;
-}
-
-.#{$prefix}-btn-primary {
+.or-btn-primary {
   background-color: $primary-color;
   color: $white;
   border-color: $primary-color;
@@ -50,7 +45,7 @@
   }
 }
 
-.#{$prefix}-btn-warning {
+.or-btn-warning {
   background-color: $warning-color;
   color: $white;
   border-color: $warning-color;
@@ -61,4 +56,20 @@
   }
 }
 
-// back to top button
+.or-btn-size-default {
+  min-width: 120px;
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: 14px;
+}
+
+.or-btn-size-large {
+  min-width: 300px;
+  padding: $btn-padding-y-lg $btn-padding-x-lg;
+  font-size: 16px;
+}
+
+.or-btn-size-small {
+  min-width: 100px;
+  padding: $btn-padding-y-sm $btn-padding-x-sm;
+  font-size: 14px;
+}
