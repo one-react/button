@@ -3,9 +3,9 @@ import { withInfo } from '@storybook/addon-info'
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
-import Button from '../../src'
+import Button from 'or-button'
 
-import './index.scss'
+import './styles.scss'
 
 const handleClick = action('button-click')
 storiesOf('or-button', module).add(
