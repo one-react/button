@@ -72,7 +72,7 @@ storiesOf('or-button', module).add(
         <h1>text is too long:</h1>
         <div className="long">
           <Button size="large" onClick={handleClick}>
-            TOO LOOOOOOOOOOOOOOOOOOG
+            TOO LOOOOOOOOOOOOOOOOOOOG
           </Button>
         </div>
       </div>
