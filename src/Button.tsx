@@ -27,7 +27,7 @@ interface Props {
 }
 
 export class Button extends PureComponent<Props, {}> {
-  public render() {
+  render() {
     const {
       type = 'default',
       size = 'default',
@@ -52,7 +52,7 @@ export class Button extends PureComponent<Props, {}> {
     )
   }
 
-  public handleClick = (e: MouseEvent<HTMLElement>) => {
+  handleClick = (e: MouseEvent<HTMLElement>) => {
     e.preventDefault()
     const { disabled, onClick } = this.props
     if (!disabled && onClick) {
