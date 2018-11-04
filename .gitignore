@@ -57,7 +57,13 @@ typings/
 # dotenv environment variables file
 .env
 
-# dist dir
+# bundle dir
 lib
+es
+
+# storybook examples outputs
+site
 
 package-lock.json
+
+.DS_Store

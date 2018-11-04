@@ -1,8 +1,18 @@
 import { configure } from '@storybook/react'
+import { withOptions } from '@storybook/addon-options'
 
+withOptions({
+  name: 'One React',
+  url: 'https://github.com/one-react/button',
+  goFullScreen: false,
+  showAddonPanel: true,
+  addonPanelInRight: true,
+})
+
+// automatically import all files ending with *.story.tsx
+const req = require.context('../stories', true, /.story.tsx$/)
 function loadStories() {
-  require('../stories')
-  // You can require as many stories as you need.
+  req.keys().forEach(filename => req(filename))
 }
 
 configure(loadStories, module)
