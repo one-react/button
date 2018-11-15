@@ -17,9 +17,9 @@ interface Props {
    **/
   disabled?: boolean
   /**
-   * custom classname
+   * custom className
    **/
-  classname?: string
+  className?: string
   /**
    * callback triggered button click
    **/
@@ -33,7 +33,7 @@ export class Button extends PureComponent<Props, {}> {
       size = 'default',
       children,
       disabled,
-      classname
+      className
     } = this.props
     const btnClass = clx(
       'or-btn',
@@ -42,7 +42,7 @@ export class Button extends PureComponent<Props, {}> {
         [`or-btn-size-${size}`]: size,
         [`or-btn-disabled`]: disabled
       },
-      classname
+      className
     )
 
     return (
