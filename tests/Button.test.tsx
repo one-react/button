@@ -68,6 +68,19 @@ describe('src/index', () => {
     expect(wrapper.find('.or-btn-size-large').length).toBe(1)
   })
 
+  it('should render properly: className', () => {
+    const wrapper = mount(
+      generateButton(
+        {
+          className: 'hello'
+        },
+        'addtion className'
+      )
+    )
+    expect(wrapper.find('.or-btn').length).toBe(1)
+    expect(wrapper.find('.or-btn').hasClass('hello')).toBe(true)
+  })
+
   it('simulates click events', () => {
     const mockCallBack = jest.fn()
     const wrapper = mount(
