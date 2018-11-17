@@ -90,7 +90,7 @@ $or-btn-default-color: $or-gray8 !default;
 ```
 For more variables, see [here](https://github.com/one-react/button/blob/master/src/styles.scss).
 
-Alternatively, you can override variables from [or-theme](https://github.com/one-react/theme/blob/master/src/variables.scss) to Keep all or-components in a unified theme style.
+Alternatively, you can override variables from [or-theme](https://github.com/one-react/theme/blob/master/src/variables.scss) to keep all or-components in a unified theme style.
 
 First you should create a `theme.scss` file to declare the variables you want to override.
 
