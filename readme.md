@@ -20,7 +20,77 @@ npm install or-button
 yarn add or-button
 ```
 
-## Docs
+## Usage
+- Config webpack `sass-loader` if you are using webpack.
+
+```js
+// webpack.config.js
+{
+  test: /\.scss$/,
+  use: [
+    'style-loader',
+    'css-loader',
+    'sass-loader'
+  ],
+  include: [
+    /node_modules\/or\-\w+/ //include or-components
+  ]
+}
+```
+
+## Basic Example
+
+```js
+import Button from 'or-button'
+
+<Button className="hello" type="primary" onClick={handleClick}>ADD TO CART</Button>
+<Button type="warning" size="small" onClick={handleClick}>DELETE</Button>
+```
+
+## API
+[see](https://one-react.github.io/button)
+
+## Customize Theme
+**Customize in webpack**
+
+The following variables can be overridden:
+
+```scss
+$or-btn-primary-color: $or-primary-color !default;
+$or-btn-warning-color: $or-warning-color !default;
+$or-btn-disabled-color: $or-disabled-color !default;
+$or-btn-default-color: $or-gray8 !default;
+...
+```
+For more variables, see [here](https://github.com/one-react/button/blob/master/src/styles.scss).
+
+First you should create a `theme.scss` file to declare the variables you want to override.
+
+Then use the [data](https://github.com/webpack-contrib/sass-loader#environment-variables)  option provided by `sass-loader` to override the default values of the variables.
+
+We take a typical `webpack.config.js` file as example to customize it's sass-loader options.
+
+```js
+// webpack.config.js
+{
+  test: /\.scss$/,
+  use: [
+    'style-loader',
+    'css-loader',
+    {
+      loader: 'sass-loader',
+      options: {
+        data: fs.readFileSync(path.resolve(__dirname, 'theme.scss')) // pass theme.scss to sass-loader
+      }
+    }
+  ],
+  include: [
+    /node_modules\/or\-\w+/ //include or-components
+  ]
+}
+```
+
+## Demos and Docs
 > powered by [storybook](https://storybook.js.org/)
 
 [Click Here](https://one-react.github.io/button)
