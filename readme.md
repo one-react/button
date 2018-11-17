@@ -40,7 +40,7 @@ yarn add or-button
 
 ## Basic Example
 
-```js
+```jsx
 import Button from 'or-button'
 
 <Button className="hello" type="primary" onClick={handleClick}>ADD TO CART</Button>
@@ -48,7 +48,33 @@ import Button from 'or-button'
 ```
 
 ## API
-[see](https://one-react.github.io/button)
+
+```ts
+interface Props {
+  /**
+   * type for button
+   * @default 'default'
+   **/
+  type?: 'primary' | 'warning'
+  /**
+   * size for button
+   * @default 'default'
+   **/
+  size?: 'large' | 'small'
+  /**
+   * whether the button can be clicked
+   **/
+  disabled?: boolean
+  /**
+   * custom className
+   **/
+  className?: string
+  /**
+   * callback triggered button click
+   **/
+  onClick?: () => void
+}
+```
 
 ## Customize Theme
 **Customize in webpack**
