@@ -14,7 +14,7 @@ storiesOf('or-button', module).add(
     <div>
       <h1>button type:</h1>
       <div>
-        <Button classname="hello world" type="primary" onClick={handleClick}>
+        <Button className="hello world" type="primary" onClick={handleClick}>
           ADD TO CART
         </Button>
         <Button onClick={handleClick}>SIGN UP</Button>
